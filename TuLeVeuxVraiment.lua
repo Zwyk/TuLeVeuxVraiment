@@ -20,7 +20,7 @@ function SlashHandler(arg)
 end
 
 function tlvv:ADDON_LOADED(addon)
-    if(addon == "TuLeVeuxVraiment") then
+    if(addon == addonName) then
 
 		SlashCmdList["TLVV"] = SlashHandler;
 		SLASH_TLVV1 = "/tlvv";
@@ -43,9 +43,9 @@ function tlvv:CHAT_MSG_LOOT(msg, ...)
 	    -- ...multiple item - "You receive loot: %sx%d." -> item + quantity
 	    local PATTERN_LOOT_ITEM_SELF_MULTIPLE = LOOT_ITEM_SELF_MULTIPLE:gsub("%%s", "(.+)"):gsub("%%d", "(%%d+)")
 	    -- other loot
-	    -- ...single item - "%s receives loot: %s." -> item
+	    -- ...single item - "%s receives loot: %s." -> player + item
 	    local PATTERN_LOOT_ITEM = LOOT_ITEM:gsub("%%s", "(.+)")
-	    -- ...multiple item - "%s receives loot: %sx%d." -> item + quantity
+	    -- ...multiple item - "%s receives loot: %sx%d." -> player + item + quantity
 	    local PATTERN_LOOT_ITEM_MULTIPLE = LOOT_ITEM_MULTIPLE:gsub("%%s", "(.+)"):gsub("%%d", "(%%d+)")
 	    
 	    -- self
