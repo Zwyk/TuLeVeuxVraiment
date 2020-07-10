@@ -1,0 +1,10 @@
+## Interface: 11305
+## Title: TuLeVeuxVraiment
+## Version: 1.0.0
+## Author: Zwyk
+## Notes: A loot tool for OWLS
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: DataGlobal
+## SavedVariablesPerCharacter: DataChar
+TuLeVeuxVraiment.lua
